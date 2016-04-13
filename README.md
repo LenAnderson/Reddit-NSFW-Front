@@ -1,5 +1,5 @@
 # Reddit NSFW Front
-UserScript to show all the NSFW posts from reddit's front page
+UserScript to show all the NSFW posts from reddit's front page or subreddit (within the current list, e.g. all "Hot" posts).
 
 ## Installation
 You need to have a UserScript extension (e.g. Tampermonkey for Chrome, Greasemonkey for Firefox) installed to run this script.
