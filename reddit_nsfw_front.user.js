@@ -2,7 +2,7 @@
 // @name         Reddit - NSFW Front
 // @namespace    https://github.com/LenAnderson/
 // @downloadURL  https://github.com/LenAnderson/Reddit-NSFW-Front/raw/master/reddit_nsfw_front.user.js
-// @version      0.1
+// @version      0.2
 // @author       LenAnderson
 // @match        https://www.reddit.com/*
 // @match        https://www.reddit.com
@@ -40,7 +40,6 @@ function getThings(html) {
 }
 
 
-document.title = document.title.replace('the front page', 'the nsfw front page');
 
 var topnav = document.querySelector('.sr-list > .flat-list.sr-bar.hover');
 var navli = document.createElement('li');
@@ -57,6 +56,7 @@ navli.appendChild(nava);
 
 
 if (location.search.substring(1).split('&').lastIndexOf('nsfwfront') != -1) {
+    document.title = document.title.replace('the front page', 'the nsfw front page');
     var sel = document.querySelector('.sr-list > .flat-list.sr-bar.hover > .selected');
     sel.classList.remove('selected');
     nava.textContent = 'NSFW (' + sel.querySelector('a').textContent + ')';
