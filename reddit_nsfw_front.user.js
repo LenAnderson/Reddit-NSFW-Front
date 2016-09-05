@@ -2,7 +2,7 @@
 // @name         Reddit - NSFW Front
 // @namespace    https://github.com/LenAnderson/
 // @downloadURL  https://github.com/LenAnderson/Reddit-NSFW-Front/raw/master/reddit_nsfw_front.user.js
-// @version      0.2
+// @version      0.3
 // @author       LenAnderson
 // @match        https://www.reddit.com/*
 // @match        https://www.reddit.com
@@ -21,7 +21,7 @@ function getThings(html) {
             loading.textContent = 'getting things... [' + (things.length/2) + ']';
         }
     });
-    var next = html.querySelector('.nav-buttons > .nextprev > [rel~="next"]');
+    var next = html.querySelector('.nav-buttons > .nextprev [rel~="next"]');
     if (next) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', next.href, true);
